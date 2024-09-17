@@ -26,7 +26,7 @@ const CreateBlog = () => {
 
         e.preventDefault();
         // send the above states data to api
-        const response = await axios.post("http://localhost:8000/createBlog", data)
+        const response = await axios.post("https://cms-backend-suman.vercel.app/createBlog", data)
         if (response.status == 200) {
             alert(response.data.message)
             navigate("/")

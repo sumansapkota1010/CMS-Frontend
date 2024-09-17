@@ -22,7 +22,7 @@ const UpdateBlog = () => {
     }
     const handleUpdate = async (e) => {
         e.preventDefault()
-        const response = await axios.patch("http://localhost:8000/blogs/" + id, blog)
+        const response = await axios.patch("https://cms-backend-suman.vercel.app/blogs/" + id, blog)
         if (response.status == 200) {
             navigate("/singleBlog/" + id)
         }
@@ -31,7 +31,7 @@ const UpdateBlog = () => {
 
 
     const fetchSingleData = async () => {
-        const response = await axios.get("http://localhost:8000/blogs/" + id)
+        const response = await axios.get("https://cms-backend-suman.vercel.app/blogs/" + id)
 
         if (response.status == 200) {
             setBlog(response.data.data)

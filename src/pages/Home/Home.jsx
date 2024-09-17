@@ -10,7 +10,7 @@ const Home = () => {
     const [data, setData] = useState([])
 
     const fetchData = () => {
-        axios.get("http://localhost:8000/blogs/").then((res) => {
+        axios.get("https://cms-backend-suman.vercel.app/blogs").then((res) => {
             setData(res.data.data)
             console.log(res.data.data)
         })

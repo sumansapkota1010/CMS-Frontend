@@ -14,7 +14,7 @@ const SingleBlog = () => {
     // Delete Blog
 
     const deleteBlog = async () => {
-        const response = await axios.delete(`http://localhost:8000/blogs/${id}`)
+        const response = await axios.delete(`https://cms-backend-suman.vercel.app/blogs/${id}`)
         if (response.status == 200) {
             alert("Blog Deleted")
             navigate('/')
@@ -25,7 +25,7 @@ const SingleBlog = () => {
 
     const fetchSingleData = async () => {
 
-        let response = await axios.get(`http://localhost:8000/blogs/${id}`)
+        let response = await axios.get(`https://cms-backend-suman.vercel.app/blogs/${id}`)
         if (response.status == 200) {
             setSingleData(response.data.data)
         }
